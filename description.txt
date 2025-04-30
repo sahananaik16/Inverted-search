@@ -1,0 +1,140 @@
+Project Name: Inverted Search
+Description: An inverted search project in data structures involves creating a system that enables efficient searching of text 
+             documents by indexing the words within them. This system utilizes an inverted index, a data structure that maps each 
+             unique word (or term) to the documents in which it appears. The primary goal is to facilitate quick retrieval of documents 
+             based on keyword searches.In the implementation, the project typically starts by reading and processing a collection of 
+             text files. Each word is extracted, normalized, and indexed alongside its corresponding document identifier. The index may 
+             also store additional information, such as the frequency of the word within each document or its position.
+             When a user performs a search query, the inverted index allows the system to quickly locate all documents containing the 
+             specified keywords, significantly reducing search time compared to scanning through each document linearly.  
+             Overall, an inverted search project enhances the searchability of large datasets, making it an essential component in 
+             applications like search engines, document management systems, and information retrieval systems.
+
+
+Input: ./a.out f1.txt f1.txttxt f2.txt f2.c gt.txt f3.txt f4.txt f5.txt f6.txt
+
+Output:
+
+f1.txt file is added to the list
+f1.txttxt file has invalid extension
+f2.txt file is added to the list
+f2.c file has invalid extension
+gt.txt file doesn't exist
+f3.txt file is added to the list
+f4.txt file is added to the list
+f5.txt file is added to the list
+f6.txt file doesn't have any content
+Files from which data is saved in database :f1.txt f2.txt f3.txt f4.txt f5.txt 
+
+MENU:
+1.Create database
+2.Display database
+3.Search database
+4.Save database
+5.Update database
+6. Exit
+
+Test case 1:
+Input: Enter the choice: 2
+
+Output: Hash table is empty!!
+
+Test case 2:
+input: Enter the choice: 1
+
+Output: Database created successfully
+
+Test case 3:
+Input: Enter the choice: 2
+
+Output:
+
+Index   Word    File count      Filename        File count
+[0]     are     1               f1.txt          1
+[1]     bye     1               f5.txt          1
+[7]     hi      4               f1.txt          1               f2.txt          1               f3.txt          1               f5.txt          1
+[7]     hello   2               f1.txt          1               f2.txt          1
+[7]     how     1               f1.txt          1
+[7]     HI      1               f4.txt          1
+[7]     Hello   1               f4.txt          1
+[7]     Hi      1               f4.txt          1
+[24]    you     1               f1.txt          1
+
+Test case 4:
+Input: 
+Enter the choice: 3
+Enter the word to be searched: find
+
+Output:
+Word not found!!
+
+Test case 5:
+Input:
+Enter the choice: 3
+Enter the word to be searched: hi 
+
+Output:
+hi      4       f1.txt  1       f2.txt  1       f3.txt  1       f5.txt  1
+
+
+Test case 6:
+Input:
+Enter the choice: 4
+Enter the filename where database should be saved: save1.txt
+
+Output:
+Data base saved successfully
+
+#0;are;1;f1.txt;1;#
+#1;bye;1;f5.txt;1;#
+#7;hi;4;f1.txt;1;f2.txt;1;f3.txt;1;f5.txt;1;#
+#7;hello;2;f1.txt;1;f2.txt;1;#
+#7;how;1;f1.txt;1;#
+#7;HI;1;f4.txt;1;#
+#7;Hello;1;f4.txt;1;#
+#7;Hi;1;f4.txt;1;#
+#24;you;1;f1.txt;1;#
+
+Test case 7:
+input:
+Enter the choice: 5
+
+output:
+Database already updated or created
+
+Test case 8:
+input:
+Enter the choice: 7
+
+output:
+Invalid choice!
+
+Test case 9:
+input:
+Enter the choice: 5       
+Enter the saved filename: gdg
+
+output:
+File extension should be .txt!!
+
+Test case 10:
+input:
+Enter the choice: 5
+Enter the saved filename: save1.txt
+
+output:
+updating successfull
+
+Test case 11:
+input:
+Enter the choice: 5
+
+output:
+Database already updated or created
+
+Test case 12:
+input:
+Enter the choice: 6
+
+output:
+Exiting..
